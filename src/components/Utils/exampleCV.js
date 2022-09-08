@@ -1,30 +1,30 @@
 import { v4 as uuidv4 } from 'uuid'
-import examplePhoto from '../../assets/example_photo.jpg'
+import examplePhoto from '../../assets/gilfoyle.jpg'
 
 const exampleCV = {
   personalInfo: {
-    firstName: 'John',
-    lastName: 'Doe',
-    title: 'Senior Web Developer',
+    firstName: 'Bertram',
+    lastName: 'Gilfoyle',
+    title: 'Systems Engineer',
     photo: examplePhoto,
     address: 'Example Street 10',
     phoneNumber: '123456789',
-    email: 'john.doe@gmail.com',
+    email: 'bertram@gilfoyle.com',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempus imperdiet nisl sed vestibulum. Donec gravida, nulla eget blandit fermentum, mauris nisi rutrum libero, ac pharetra erat est sit amet tellus. Quisque fermentum dolor a interdum fermentum. Maecenas vehicula ac ipsum nec gravida. Integer quis porta turpis. Aenean et metus.',
+    'I’m a Universal Soldier with experience and a strong knowledge of any ever invented programming language. I worked alone and have experience of working in team. My skill are now pretty good but It-industry rapidly changes and I need every year discover new technologies. Although all programming languages have its pros & cons but I see that JS is the future. "Сильное заяление " as in Russia it is said',
   },
   experience: [
     {
       id: uuidv4(),
-      position: 'Senior Web Developer',
+      position: 'Senior Systems Engineer',
       company: 'Facebook Inc.',
       city: 'Menlo Park',
-      from: '2015',
+      from: '2016',
       to: 'Present',
     },
     {
       id: uuidv4(),
-      position: 'Junior Web Developer',
+      position: 'Systems Architect',
       company: 'Tesla Inc.',
       city: 'Palo Alto',
       from: '2012',
@@ -32,7 +32,7 @@ const exampleCV = {
     },
     {
       id: uuidv4(),
-      position: 'UI / UX Designer',
+      position: 'Software Engineer',
       company: 'Google LLC',
       city: 'Mountain View',
       from: '2010',
@@ -53,7 +53,7 @@ const exampleCV = {
       universityName: 'University of Technology',
       city: 'Oklahoma',
       degree: 'Master',
-      subject: 'Science',
+      subject: 'Computer Architecture',
       from: '2008',
       to: '2010',
     },
@@ -62,7 +62,7 @@ const exampleCV = {
       universityName: 'University of Design Art',
       city: 'New York',
       degree: 'Bachelor',
-      subject: 'Visual Art',
+      subject: 'Computer Science',
       from: '2005',
       to: '2008',
     },
