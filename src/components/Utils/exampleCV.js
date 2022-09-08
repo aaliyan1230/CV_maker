@@ -83,7 +83,7 @@ const exampleCV = {
     },
     {
       id: uuidv4(),
-      name: 'Full Stack Development'
+      name: 'FullStack Dev'
     },
   ],
 }
