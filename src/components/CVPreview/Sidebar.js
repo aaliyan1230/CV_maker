@@ -3,7 +3,8 @@ import styled from "styled-components";
 import Section from "../Utils/Section";
 import Subsection from "../Utils/Subsection";
 
-const Sidebar = ({ personalInfo }) => {
+const Sidebar = ({ personalInfo, sk }) => {
+  const skills=sk.map((s)=>(<li>{s.name}</li>));
   return (
     <SidebarWrapper>
       <Photo src={personalInfo.photo} />
@@ -11,6 +12,9 @@ const Sidebar = ({ personalInfo }) => {
         <Subsection title="Address">{personalInfo.address}</Subsection>
         <Subsection title="Phone Number">{personalInfo.phoneNumber}</Subsection>
         <Subsection title="Email">{personalInfo.email}</Subsection>
+      </Section>
+      <Section title="Skills" contrastTitle direction="column">
+        {skills}
       </Section>
     </SidebarWrapper>
   );

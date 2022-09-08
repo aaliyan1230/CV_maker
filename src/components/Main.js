@@ -7,6 +7,7 @@ import CVPreview from './CVPreview'
 import exampleCV from './Utils/exampleCV'
 import emptyCV from './Utils/emptyCV'
 
+
 const Main = () => {
   const [cv, setCv] = useState(emptyCV)
 
@@ -84,6 +85,47 @@ const Main = () => {
       return { ...prevState, experience: [...newExperience] }
     })
   }
+  
+  const handleChangeCertification = (c, id) => {
+    const { name, value } = c.target
+
+    setCv((prevState) => {
+      const newCertification = prevState.certification.map((certificationItem) => {
+        if (certificationItem.id === id) {
+          return { ...certificationItem, [name]: value }
+        }
+        return certificationItem
+      })
+      return { ...prevState, certification: [...newCertification] }
+    })
+  }
+
+  const handleAddCertification = () => {
+    setCv((prevState) => ({
+      ...prevState,
+      certifications: [
+        ...prevState.certification,
+        {
+          id: uuidv4(),
+          position: '',
+          company: '',
+          city: '',
+          from: '',
+          to: '',
+        },
+      ],
+    }))
+  }
+
+  const handleDeleteCertification = (id) => {
+    setCv((prevState) => {
+      const newCertification = prevState.certification.filter(
+        (certificationItem) => certificationItem.id !== id
+      )
+      return { ...prevState, certification: [...newCertification] }
+    })
+  }
+
 
   const handleChangeEducation = (e, id) => {
     const { name, value } = e.target
@@ -126,6 +168,42 @@ const Main = () => {
     })
   }
 
+  const handleChangeSkill = (e, id) => {
+    const { name, value } = e.target
+
+    setCv((prevState) => {
+      const newSkill = prevState.skills.map((skillItem) => {
+        if (skillItem.id === id) {
+          return { ...skillItem, [name]: value }
+        }
+        return skillItem
+      })
+      return { ...prevState, skills: [...newSkill] }
+    })
+  }
+
+  const handleAddSkill = () => {
+    setCv((prevState) => ({
+      ...prevState,
+      skills: [
+        ...prevState.skills,
+        {
+          id: uuidv4(),
+          name: '',
+        },
+      ],
+    }))
+  }
+
+  const handleDeleteSkill = (id) => {
+    setCv((prevState) => {
+      const newSkill = prevState.skills.filter(
+        (skillItem) => skillItem.id !== id
+      )
+      return { ...prevState, skills: [...newSkill] }
+    })
+  }
+
   const handleLoadExample = () => {
     setCv(exampleCV)
   }
@@ -150,6 +228,12 @@ const Main = () => {
         onChangeEducation={handleChangeEducation}
         onAddEducation={handleAddEducation}
         onDeleteEducation={handleDeleteEducation}
+        onAddCertification={handleAddCertification}
+        onChangeCertification={handleChangeCertification}
+        onDeleteCertification={handleDeleteCertification}
+        onAddSkill={handleAddSkill}
+        onChangeSkill={handleChangeSkill}
+        onDeleteSkill={handleDeleteSkill}
         onPrint={handlePrint}
         onLoadExample={handleLoadExample}
         onReset={handleReset}

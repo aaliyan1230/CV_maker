@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Personal from "./Personal";
 import Education from "./Education";
 import Experience from "./Experience";
+import Certification from "./Certification";
+import Skills from "./Skills";
 import Button from "../Utils/Button";
 
 const CVForm = ({
@@ -14,6 +16,12 @@ const CVForm = ({
   onChangeEducation,
   onAddEducation,
   onDeleteEducation,
+  onChangeCertification,
+  onAddCertification,
+  onDeleteCertification,
+  onChangeSkill,
+  onAddSkill,
+  onDeleteSkill,
   onPrint,
   onLoadExample,
   onReset,
@@ -32,6 +40,18 @@ const CVForm = ({
         onChange={onChangeEducation}
         onAdd={onAddEducation}
         onDelete={onDeleteEducation}
+      />
+      <Certification
+      certification={cv.certification}
+      onChange={onChangeCertification}
+      onAdd={onAddCertification}
+      onDelete={onDeleteCertification} 
+      />
+      <Skills
+      skills={cv.skills}
+      onChange={onChangeSkill}
+      onAdd={onAddSkill}
+      onDelete={onDeleteSkill} 
       />
       <>
         <Button text="Generate PDF" onClick={onPrint} primary></Button>

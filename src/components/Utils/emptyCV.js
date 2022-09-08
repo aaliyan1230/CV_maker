@@ -33,6 +33,22 @@ const exampleCV = {
       to: "",
     },
   ],
+  certification: [
+    {
+      id: uuidv4(),
+      name: '',
+      source: '',
+      date: '',
+      link: '',
+    },
+  ],
+  skills: [
+    {
+      id: uuidv4(),
+      name: ''
+    }
+  ],
+  
 };
 
 export default exampleCV;

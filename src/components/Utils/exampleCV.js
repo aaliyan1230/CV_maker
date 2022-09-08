@@ -38,14 +38,6 @@ const exampleCV = {
       from: '2010',
       to: '2012',
     },
-    {
-      id: uuidv4(),
-      position: 'Position',
-      company: 'Company name',
-      city: 'City name',
-      from: 'From',
-      to: 'To',
-    },
   ],
   education: [
     {
@@ -66,14 +58,32 @@ const exampleCV = {
       from: '2005',
       to: '2008',
     },
+    
+  ],
+  certification: [
     {
       id: uuidv4(),
-      universityName: 'University name',
-      city: 'City name',
-      degree: '',
-      subject: '',
-      from: 'From',
-      to: 'To',
+      name: 'MTA-9881-Programming In Rust',
+      source: 'Microsoft',
+      date: 'June 2018',
+      link: '',
+    },
+    {
+      id: uuidv4(),
+      name: 'CLD-6969-Cloud Architect',
+      source: 'AWS',
+      date: 'August 2021',
+      link: '',
+    },
+  ],
+  skills: [
+    {
+      id: uuidv4(),
+      name: 'System Architecture'
+    },
+    {
+      id: uuidv4(),
+      name: 'Full Stack Development'
     },
   ],
 }
