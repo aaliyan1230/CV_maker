@@ -19,14 +19,14 @@ const HeaderContainer = styled.div`
 
 const HeaderWrapper = styled.div`
 
-  font-family: 'HussarBold' ,'Zen Tokyo Zoo', cursive;
+  font-family:'Lovelo' ,'OpenSans' , cursive, sans-serif;
   display: flex;
   align-items: center;
   max-width: 1800px;
   padding: 3rem 8rem;
   margin: 0 auto;
   color: ${({ theme }) => theme.colors.light};
-  font-size: 2.2rem;
+  font-size: 2.5rem;
 
   @media (max-width: 1600px) {
     justify-content: center;
